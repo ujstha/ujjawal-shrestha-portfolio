@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6"
 import { Spotlight } from "@ui/Spotlight"
 import { MagicButton } from "@ui/MagicButton"
 import { ScrollButton } from "@ui/ScrollButton"
+import { SocialMedia } from "@ui/SocialMedia"
 
 import ComputersCanvas from "@canvas/Computers"
 
@@ -22,7 +23,7 @@ const Hero = () => {
       </div>
 
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto sm:px-16 px-2 flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[85px] sm:top-[120px] max-w-7xl mx-auto sm:px-16 px-2 flex flex-row items-start gap-5`}
       >
         {/* <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-accent" />
@@ -37,13 +38,16 @@ const Hero = () => {
             <span className="text-accent font-extrabold">Ujjawal</span>
           </h1>
           <p
-            className={`sm:mt-4 mt-2 text-muted lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[18px] lg:leading-[40px]`}
+            className={`sm:mt-4 mt-1 text-muted lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[18px] lg:leading-[40px]`}
           >
             Full-stack Developer. Web Developer. Learner.
           </p>
+          <div className="flex items-center md:gap-3 gap-4 mt-4 sm:mt-6">
+            <SocialMedia />
+          </div>
           <a href="#projects" className="relative z-10 block sm:mt-6 mt-10">
             <MagicButton
-              title="Show my work"
+              title="View my projects"
               icon={<FaLocationArrow />}
               position="right"
             />
