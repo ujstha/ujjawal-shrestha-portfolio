@@ -17,14 +17,12 @@ const Projects = () => {
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
-          <div
+          <a
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
+            href={item.demo_link}
           >
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
+            <PinContainer title={item.demo_link} href={item.demo_link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -35,17 +33,11 @@ const Projects = () => {
                 <img src={item.img} alt="cover" className="absolute bottom-0" />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h3 className="font-bold lg:text-xl md:text-lg text-base line-clamp-1">
                 {item.title}
-              </h1>
+              </h3>
 
-              <p
-                className="line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
+              <p className="text-sm sm:text-base text-secondary line-clamp-2 my-[1vh] mx-0">
                 {item.des}
               </p>
 
@@ -60,16 +52,16 @@ const Projects = () => {
 
                 <a
                   href={item.demo_link}
-                  className="flex justify-center items-center"
+                  className="flex justify-center items-center text-accent"
                 >
-                  <p className="flex lg:text-base sm:text-xs text-sm text-purple">
+                  <p className="flex lg:text-base sm:text-xs text-sm">
                     Check Live Site
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <FaLocationArrow className="ms-3" />
                 </a>
               </div>
             </PinContainer>
-          </div>
+          </a>
         ))}
       </div>
     </>
