@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply m-0 p-0 box-border border-border !scroll-smooth font-light;
+    @apply m-0 p-0 box-border border-border !scroll-smooth font-light transition-colors duration-150;
     color-scheme: dark;
   }
   body {

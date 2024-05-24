@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav
       className={`w-full flex items-center ${
         styles.paddingX
-      } py-2 fixed left-0 top-0 z-50 ${
+      } py-0.5 fixed left-0 top-0 z-50 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -52,7 +52,7 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-accent" : "text-white"
-              } hover:text-accent text-sm cursor-pointer`}
+              } hover:text-accent text-sm sm:text-base cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
