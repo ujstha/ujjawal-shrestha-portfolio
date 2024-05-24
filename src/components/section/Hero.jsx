@@ -31,14 +31,14 @@ const Hero = () => {
 
         <div>
           <h1
-            className={`mt-4 font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
+            className={`mt-4 font-extrabold text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
           >
-            Hi, I'm <span className="text-accent">Ujjawal</span>
+            Hi, I'm <span className="text-accent font-extrabold">Ujjawal</span>
           </h1>
           <p
-            className={`sm:mt-4 mt-2 text-muted lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]`}
+            className={`sm:mt-4 mt-2 text-muted lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[18px] lg:leading-[40px]`}
           >
-            I am a Full-stack Developer
+            Full-stack Developer. Web Developer. Learner.
           </p>
           <a href="#projects" className="relative z-10 block sm:mt-6 mt-10">
             <MagicButton
