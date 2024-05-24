@@ -78,7 +78,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-transparent p-8 rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+        className="flex-[0.75] bg-transparent md:p-8 px-4 py-6 rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -86,7 +86,7 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="mt-8 flex flex-col md:gap-6 gap-4"
         >
           <label className="flex flex-col">
             <Label text="Your name" />
@@ -96,7 +96,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className="bg-input py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none"
+              className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
             />
           </label>
           <label className="flex flex-col">
@@ -107,18 +107,18 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className="bg-input py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none"
+              className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
             />
           </label>
           <label className="flex flex-col">
             <Label text="Your message" />
             <textarea
-              rows={7}
+              rows={5}
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="bg-input py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none"
+              className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
             />
           </label>
 
