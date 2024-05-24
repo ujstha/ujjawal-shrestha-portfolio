@@ -52,7 +52,7 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-accent" : "text-white"
-              } hover:text-accent text-sm cursor-pointer`}
+              } hover:text-accent text-sm sm:text-base cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>

@@ -43,7 +43,7 @@ const Projects = () => {
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center flex-wrap gap-2">
                   {item.tags.map((tag) => (
-                    <p key={tag} className={`text-xs text-[#8f8f8f]`}>
+                    <p key={tag} className={`text-xs text-[#18CCFC]`}>
                       #{tag}
                     </p>
                   ))}
