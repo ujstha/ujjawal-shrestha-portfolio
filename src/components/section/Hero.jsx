@@ -9,7 +9,7 @@ import ComputersCanvas from "@canvas/Computers"
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-[100dvh] mx-auto">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
 
       <div
-        className={`absolute inset-0 top-[85px] sm:top-[120px] max-w-7xl mx-auto sm:px-16 px-2 flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[90px] sm:top-[120px] max-w-7xl mx-auto sm:px-16 px-2 flex flex-row items-start gap-5`}
       >
         {/* <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-accent" />

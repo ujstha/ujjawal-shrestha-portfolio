@@ -46,13 +46,13 @@ const Navbar = () => {
           <img src={LOGO_LIGHT} alt="logo" className="size-16 object-contain" />
         </Link>
 
-        <ul className="list-none flex flex-row sm:gap-10 gap-8">
+        <ul className="list-none flex flex-row sm:gap-10 gap-6">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
                 active === nav.title ? "text-accent" : "text-white"
-              } hover:text-accent text-sm sm:text-base cursor-pointer`}
+              } hover:text-accent cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
