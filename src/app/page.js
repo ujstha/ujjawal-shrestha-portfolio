@@ -2,7 +2,8 @@ import Navbar from "@layout/Navbar"
 import Hero from "@section/Hero"
 import Experience from "@section/Experience"
 import Projects from "@section/Projects"
-import { TracingBeam } from "../components/ui/TracingBeam"
+import { TracingBeam } from "@ui/TracingBeam"
+import Footer from "@layout/Footer"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           <Hero />
           <Experience />
           <Projects />
+          <Footer />
         </TracingBeam>
       </div>
     </main>

@@ -95,3 +95,16 @@ export const projects = [
     source_code_link: "https://github.com/ujstha",
   },
 ]
+
+export const socialMedia = [
+  {
+    id: 1,
+    site_link: "https://github.com/ujstha",
+    img: "/assets/git.svg",
+  },
+  {
+    id: 2,
+    site_link: "https://www.linkedin.com/in/ujjawal-shrestha-855682159/",
+    img: "/assets/link.svg",
+  },
+]
