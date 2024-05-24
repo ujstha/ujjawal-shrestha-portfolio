@@ -5,13 +5,13 @@ import { styles } from "@/styles"
 const Footer = () => {
   return (
     <footer className={`w-full ${styles.paddingX} py-8`}>
-      <div className="flex mt-16 md:flex-row justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Ujjawal Shrestha
-        </p>
-        <div className="flex items-center md:gap-3 gap-4">
+      <div className="flex md:flex-row flex-col justify-between items-center gap-6">
+        <div className="flex items-center md:gap-3 gap-4 md:order-2">
           <SocialMedia />
         </div>
+        <p className="inline-flex md:font-normal font-light md:order-1">
+          Copyright © 2024 Ujjawal Shrestha
+        </p>
       </div>
     </footer>
   )
