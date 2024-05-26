@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 
 import { staggerContainer } from "@utils/motion"
+import { styles } from "../styles"
 
 const SectionWrapper = (Component, idName) =>
   function HOC() {
@@ -12,7 +13,7 @@ const SectionWrapper = (Component, idName) =>
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className={`sm:px-16 px-2 pt-12 sm:pt-28 max-w-7xl mx-auto relative`}
+        className={`max-w-7xl pt-12 sm:pt-28 mx-auto relative`}
       >
         <span className="hash-span" id={idName}>
           &nbsp;

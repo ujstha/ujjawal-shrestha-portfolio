@@ -1,5 +1,7 @@
 import { CHOICELY, EVENTTI, NORDXM } from "../assets"
+import { GITHUB_ICON, LINKEDIN_ICON, EMAIL_ICON } from "./icons"
 
+export * from "./icons"
 export const navLinks = [
   {
     id: "about",
@@ -96,15 +98,39 @@ export const projects = [
   },
 ]
 
+export const educations = [
+  {
+    id: 1,
+    degree: "High School Diploma",
+    institution: "Prasadi Adacemy Higher Secondary School",
+    place: "Kathmandu, Nepal",
+    start_year: "2013",
+    end_year: "2015",
+  },
+  {
+    id: 2,
+    degree: "Bachelor in Information Technology",
+    institution: "Oulu University of Applied Sciences",
+    place: "Oulu, Finland",
+    start_year: "2016",
+    end_year: "2020",
+  },
+]
+
 export const socialMedia = [
   {
     id: 1,
     site_link: "https://github.com/ujstha",
-    img: "/assets/git.svg",
+    icon: GITHUB_ICON,
   },
   {
     id: 2,
     site_link: "https://www.linkedin.com/in/ujjawal-shrestha-855682159/",
-    img: "/assets/link.svg",
+    icon: LINKEDIN_ICON,
+  },
+  {
+    id: 3,
+    site_link: `mailto:${process.env.NEXT_PUBLIC_RECIPIENT_EMAIL}`,
+    icon: EMAIL_ICON,
   },
 ]

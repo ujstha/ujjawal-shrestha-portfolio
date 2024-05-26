@@ -42,7 +42,7 @@ module.exports = {
         },
         purple: "#CBACF9",
         border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
+        input: "rgba(var(--input), 0.04)",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -105,7 +105,6 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
     addVariablesForColors,
     function ({ matchUtilities, theme }) {
       matchUtilities(
