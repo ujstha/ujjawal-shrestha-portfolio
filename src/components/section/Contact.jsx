@@ -108,7 +108,7 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="What's your email address?"
               className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
             />
           </label>
@@ -117,7 +117,6 @@ const Contact = () => {
             <textarea
               rows={5}
               name="message"
-              
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
