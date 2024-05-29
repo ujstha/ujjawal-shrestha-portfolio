@@ -134,3 +134,41 @@ export const socialMedia = [
     icon: EMAIL_ICON,
   },
 ]
+
+export const infos = [
+  {
+    id: 1,
+    title: "",
+    description: "",
+    header: "",
+    icon: "",
+  },
+  {
+    id: 2,
+    title: "",
+    description: "",
+    header: "",
+    icon: "",
+  },
+  {
+    id: 3,
+    title: "",
+    description: "",
+    header: "",
+    icon: "",
+  },
+  {
+    id: 4,
+    title: "",
+    description: "",
+    header: "",
+    icon: "",
+  },
+  {
+    id: 5,
+    title: "",
+    description: "",
+    header: "",
+    icon: "",
+  },
+]
