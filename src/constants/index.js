@@ -138,37 +138,47 @@ export const socialMedia = [
 export const infos = [
   {
     id: 1,
-    title: "",
-    description: "",
-    header: "",
+    description: () => (
+      <>
+        I am Ujjawal Shrestha.
+        <br />I am a full-stack developer.
+      </>
+    ),
     icon: "",
+    img: "",
   },
   {
     id: 2,
-    title: "",
-    description: "",
-    header: "",
+    description: () => <></>,
     icon: "",
+    img: "/assets/ujjawal.png",
   },
   {
     id: 3,
-    title: "",
-    description: "",
-    header: "",
+    description: () => (
+      <span className="text-center">
+        <h4 className="text-6xl font-semibold">5+</h4>
+        <p>Completed Projects</p>
+      </span>
+    ),
     icon: "",
+    img: "",
   },
   {
     id: 4,
-    title: "",
-    description: "",
-    header: "",
+    description: () => (
+      <span className="text-center">
+        <h4 className="text-6xl font-semibold">4+</h4>
+        <p>Years of Experience</p>
+      </span>
+    ),
     icon: "",
+    img: "",
   },
   {
     id: 5,
-    title: "",
-    description: "",
-    header: "",
+    description: () => "",
     icon: "",
+    img: "",
   },
 ]

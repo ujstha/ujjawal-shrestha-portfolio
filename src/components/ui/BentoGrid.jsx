@@ -1,10 +1,11 @@
 import { cn } from "@utils/cn"
+import { styles } from "../../styles"
 
 export const BentoGrid = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -13,13 +14,7 @@ export const BentoGrid = ({ className, children }) => {
   )
 }
 
-export const BentoGridItem = ({
-  className,
-  title,
-  description,
-  header,
-  icon,
-}) => {
+export const BentoGridItem = ({ className, img, description, icon }) => {
   return (
     <div
       className={cn(
@@ -27,19 +22,27 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
+        background: "rgba(4,7,29,0.8)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
+      <div
+        className={`group-hover/bento:translate-x-2 transition duration-200 ${styles.paddingX} ${styles.paddingY}`}
+      >
         {icon}
-        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-          {title}
-        </div>
-        <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
-          {description}
+        <div
+          className={`h-full text-secondary text-lg flex items-center${
+            img ? " justify-center" : ""
+          }`}
+        >
+          {img && (
+            <img
+              src={img}
+              className="object-cover w-44 h-44 object-left border border-white/[0.1] bg-black-100 rounded-full"
+            />
+          )}
+          {description && <div>{description}</div>}
         </div>
       </div>
     </div>
