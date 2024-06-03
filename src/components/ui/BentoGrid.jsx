@@ -1,11 +1,14 @@
+import { InfiniteMovingCards } from "./InfiniteCards"
+import { styles } from "@/styles"
+
 import { cn } from "@utils/cn"
-import { styles } from "../../styles"
+import { skills } from "@/constants"
 
 export const BentoGrid = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl mx-auto ",
+        "grid grid-cols-6 lg:grid-cols-5 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -14,11 +17,18 @@ export const BentoGrid = ({ className, children }) => {
   )
 }
 
-export const BentoGridItem = ({ className, img, description, icon }) => {
+export const BentoGridItem = ({
+  id,
+  className,
+  img,
+  bgImg,
+  description,
+  icon,
+}) => {
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 col-span-full relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 text-lg",
         className
       )}
       style={{
@@ -27,23 +37,40 @@ export const BentoGridItem = ({ className, img, description, icon }) => {
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
+      {bgImg && (
+        <div className={`h-full absolute inset-0`}>
+          <img src={bgImg} className="object-cover h-full w-full" />
+        </div>
+      )}
       <div
         className={`group-hover/bento:translate-x-2 transition duration-200 ${styles.paddingX} ${styles.paddingY}`}
       >
         {icon}
-        <div
-          className={`h-full text-secondary text-lg flex items-center${
-            img ? " justify-center" : ""
-          }`}
-        >
-          {img && (
+        {img && (
+          <div
+            className={`h-full text-secondary flex items-center justify-center`}
+          >
             <img
               src={img}
-              className="object-cover w-44 h-44 object-left border border-white/[0.1] bg-black-100 rounded-full"
+              className="object-cover size-44 md:size-36 lg:size-44 object-left border border-white/[0.1] bg-black-100 rounded-full"
             />
-          )}
-          {description && <div>{description}</div>}
-        </div>
+          </div>
+        )}
+
+        {description && (
+          <div
+            className={`h-full relative text-secondary flex flex-col justify-center`}
+          >
+            {description}
+            {id === 7 && (
+              <InfiniteMovingCards
+                items={skills}
+                direction="left"
+                speed="slow"
+              />
+            )}
+          </div>
+        )}
       </div>
     </div>
   )

@@ -13,17 +13,13 @@ const About = () => {
       <BentoGrid className="mt-16">
         {infos.map((info, index) => (
           <BentoGridItem
+            id={info.id}
             key={info.id}
             icon={info.icon}
             description={info.description()}
             img={info.img}
-            className={
-              index === 0 || index === 4
-                ? "md:col-span-3"
-                : index === 1
-                ? "md:col-span-2"
-                : ""
-            }
+            bgImg={info.bgImg}
+            className={info.className}
           />
         ))}
       </BentoGrid>

@@ -144,41 +144,102 @@ export const infos = [
         <br />I am a full-stack developer.
       </>
     ),
+    className: "md:col-span-4 lg:col-span-3",
     icon: "",
     img: "",
+    bgImg: "",
   },
   {
     id: 2,
     description: () => <></>,
+    className: "md:col-span-2",
     icon: "",
     img: "/assets/ujjawal.png",
+    bgImg: "",
   },
   {
     id: 3,
     description: () => (
       <span className="text-center">
-        <h4 className="text-6xl font-semibold">5+</h4>
+        <h4 className="text-5xl md:text-6xl font-semibold">5+</h4>
         <p>Completed Projects</p>
       </span>
     ),
+    className: "col-span-3 lg:col-span-1",
     icon: "",
     img: "",
+    bgImg: "",
   },
   {
     id: 4,
     description: () => (
       <span className="text-center">
-        <h4 className="text-6xl font-semibold">4+</h4>
+        <h4 className="text-5xl md:text-6xl font-semibold">4+</h4>
         <p>Years of Experience</p>
       </span>
     ),
+    className: "col-span-3 lg:col-span-1",
     icon: "",
     img: "",
+    bgImg: "",
   },
   {
     id: 5,
     description: () => "",
+    className: "lg:col-span-3",
     icon: "",
     img: "",
+    bgImg: "",
   },
+  {
+    id: 6,
+    description: () => (
+      <>
+        <h4 className="font-bold">
+          Tech enthusiast with a passion for development.
+        </h4>
+      </>
+    ),
+    className: "lg:col-span-2 text-3xl",
+    icon: "",
+    img: "",
+    bgImg: "/assets/grid.svg",
+  },
+  {
+    id: 7,
+    description: () => (
+      <>
+        <p>My Tech Skills</p>
+      </>
+    ),
+    className: "lg:col-span-2",
+    icon: "",
+    img: "",
+    bgImg: "",
+  },
+  {
+    id: 8,
+    description: () => "",
+    className: "lg:col-span-1",
+    icon: "",
+    img: "",
+    bgImg: "",
+  },
+]
+
+export const skills = [
+  "css",
+  "html",
+  "typescript",
+  "javascript",
+  "next",
+  "reactjs",
+  "docker",
+  "git",
+  "tailwind",
+  "redux",
+  "nodejs",
+  "mongodb",
+  "threejs",
+  "php",
 ]
