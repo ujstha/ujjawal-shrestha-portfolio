@@ -1,11 +1,16 @@
-import { FaLocationArrow } from "react-icons/fa6"
+"use client"
+
+import { Icon } from "@iconify/react"
 
 import { Spotlight } from "@ui/Spotlight"
 import { MagicButton } from "@ui/MagicButton"
 import { ScrollButton } from "@ui/ScrollButton"
 import { SocialMedia } from "@ui/SocialMedia"
+import { TextGenerateEffect } from "@ui/TextGenerateEffect"
 
 import ComputersCanvas from "@canvas/Computers"
+
+import { LOCATION_ICON } from "@/constants"
 
 const Hero = () => {
   return (
@@ -32,23 +37,22 @@ const Hero = () => {
 
         <div>
           <h1
-            className={`mt-4 font-extrabold text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
+            className={`font-extrabold text-white lg:text-[75px] sm:text-[60px] xs:text-[50px] text-[35px] lg:leading-[98px]`}
           >
-            Hi, I&apos;m{" "}
-            <span className="text-accent font-extrabold">Ujjawal</span>
+            Hi , I&apos;m{" "}
+            <span className="text-accent font-extrabold">Ujjawal 👋</span>
           </h1>
-          <p
-            className={`sm:mt-4 mt-1 text-muted lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[18px] lg:leading-[40px]`}
-          >
-            Full-stack Developer. Web Developer. Learner.
-          </p>
+          <TextGenerateEffect
+            words="Full-stack Developer. Web Developer. Learner."
+            className={`sm:mt-2 mt-1 text-muted lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[18px] lg:leading-[30px] font-thin`}
+          />
           <div className="flex items-center md:gap-3 gap-4 mt-4 sm:mt-6">
             <SocialMedia />
           </div>
           <a href="#projects" className="relative z-10 block sm:mt-6 mt-10">
             <MagicButton
               title="View my projects"
-              icon={<FaLocationArrow />}
+              icon={<Icon icon={LOCATION_ICON} />}
               position="right"
             />
           </a>

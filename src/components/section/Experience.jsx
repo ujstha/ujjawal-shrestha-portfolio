@@ -5,11 +5,13 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
+import { motion } from "framer-motion"
 
 import SectionWrapper from "@/hoc/SectionWrapper"
 import { SectionText } from "@ui/SectionText"
 
 import { experiences } from "@/constants"
+import { textVariant } from "../../utils/motion"
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -17,9 +19,10 @@ const ExperienceCard = ({ experience }) => {
       visible={true}
       contentStyle={{
         background: "rgba(255,255,255,0.05)",
-        backdropFilter: "blur(10px)",
+        backdropFilter: "blur(2px)",
         boxShadow: "none",
         border: "1px solid rgba(243, 243, 243, 0.1)",
+        borderRadius: "16px",
       }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={experience.date}
@@ -34,14 +37,14 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
+      <motion.div variants={textVariant()}>
         <h3 className="text-white sm:text-[24px] text-[20px] font-medium">
           {experience.title}
         </h3>
         <p className="!m-0 text-accent font-thin sm:!text-base !text-sm tracking-wide">
           {experience.company_name}
         </p>
-      </div>
+      </motion.div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
