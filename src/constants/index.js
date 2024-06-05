@@ -2,6 +2,8 @@ import { CHOICELY, EVENTTI, NORDXM } from "../assets"
 import { GITHUB_ICON, LINKEDIN_ICON, EMAIL_ICON } from "./icons"
 
 export * from "./icons"
+export * from "./sanity-queries"
+
 export const navLinks = [
   {
     id: "projects",

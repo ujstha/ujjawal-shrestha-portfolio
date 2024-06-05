@@ -5,35 +5,50 @@ export const projectType = defineType({
   title: 'Project',
   type: 'document',
   fields: [
-    defineField({name: 'title', type: 'string', title: 'Title of Project'}),
+    defineField({name: 'title', title: 'Title of Project', type: 'string'}),
     defineField({
       name: 'slug',
-      type: 'slug',
       title: 'Slug of Project',
+      type: 'slug',
       options: {
         source: 'title',
       },
     }),
     defineField({
       name: 'projectImage',
-      type: 'image',
       title: 'Project Image',
+      type: 'image',
     }),
     defineField({
       name: 'smallDescription',
-      type: 'text',
       title: 'Small Description',
-    }),
-    defineField({
-      name: 'content',
-      type: 'array',
-      title: 'Content',
-      of: [{type: 'block'}],
+      type: 'text',
+      rows: 4,
     }),
     defineField({
       name: 'techs',
+      title: 'Techs used in the project',
       type: 'text',
-      title: 'Small Description',
+      rows: 2,
+      description: 'Comma separated with space after the comma. (e.g. react, next)',
+    }),
+    defineField({
+      name: 'demo_link',
+      title: 'Link to the live site',
+      type: 'url',
+      description: 'https://example.com',
+    }),
+    defineField({
+      name: 'source_code_link',
+      title: 'Link to the source code',
+      type: 'url',
+      description: 'https://github.com/example/project',
+    }),
+    defineField({
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [{type: 'block'}],
     }),
   ],
 })
