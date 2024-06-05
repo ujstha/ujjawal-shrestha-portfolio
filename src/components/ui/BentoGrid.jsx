@@ -1,9 +1,8 @@
-import { InfiniteMovingCards } from "./InfiniteCards"
-import { styles } from "@/styles"
+import { BackgroundGradientAnimation } from "./GradientBackground"
 
+import { styles } from "@/styles"
 import { cn } from "@utils/cn"
 import { skills } from "@/constants"
-import { BackgroundGradientAnimation } from "./GradientBackground"
 
 export const BentoGrid = ({ className, children }) => {
   return (
@@ -69,6 +68,7 @@ export const BentoGridItem = ({
               <div className="mt-10 flex justify-center items-center flex-wrap gap-6">
                 {skills.map((skill, index) => (
                   <img
+                    key={skill}
                     src={`/assets/tech/${skill}.svg`}
                     alt={skill}
                     className="size-12 md:size-16 object-contain"

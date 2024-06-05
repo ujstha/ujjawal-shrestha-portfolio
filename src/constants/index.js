@@ -4,12 +4,12 @@ import { GITHUB_ICON, LINKEDIN_ICON, EMAIL_ICON } from "./icons"
 export * from "./icons"
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
-  },
-  {
     id: "projects",
     title: "Projects",
+  },
+  {
+    id: "about",
+    title: "About",
   },
   {
     id: "contact",
