@@ -81,7 +81,7 @@ export const InfiniteMovingCards = ({
             <img
               src={`/assets/tech/${item}.svg`}
               alt={item}
-              className="size-16 object-contain"
+              className="size-12 md:size-16 object-contain"
             />
           </li>
         ))}

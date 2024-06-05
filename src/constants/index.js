@@ -141,13 +141,22 @@ export const infos = [
     description: () => (
       <>
         I am Ujjawal Shrestha.
-        <br />I am a full-stack developer.
+        <br />
+        <br />
+        I&apos;m a skilled software developer with experience in TypeScript and
+        JavaScript, and expertise in frameworks like NextJS, React, Node.js, and
+        Three.js.
+        <br />
+        <br />
+        I&apos;m a quick learner and collaborate closely with clients to create
+        efficient, scalable, and user-friendly solutions that solve real-world
+        problems. Let&apos;s work together to bring ideas to life!
       </>
     ),
     className: "md:col-span-4 lg:col-span-3",
     icon: "",
     img: "",
-    bgImg: "",
+    bgImg: "/assets/grid.svg",
   },
   {
     id: 2,
@@ -185,8 +194,12 @@ export const infos = [
   },
   {
     id: 5,
-    description: () => "",
-    className: "lg:col-span-3",
+    description: () => (
+      <>
+        <p className="text-center text-3xl font-bold">My Tech Skills</p>
+      </>
+    ),
+    className: "lg:col-span-3 lg:row-span-2",
     icon: "",
     img: "",
     bgImg: "",
@@ -195,35 +208,15 @@ export const infos = [
     id: 6,
     description: () => (
       <>
-        <h4 className="font-bold">
+        <h4 className="font-bold -mt-2">
           Tech enthusiast with a passion for development.
         </h4>
       </>
     ),
-    className: "lg:col-span-2 text-3xl",
+    className: "lg:col-span-2 text-2xl md:text-3xl",
     icon: "",
     img: "",
     bgImg: "/assets/grid.svg",
-  },
-  {
-    id: 7,
-    description: () => (
-      <>
-        <p>My Tech Skills</p>
-      </>
-    ),
-    className: "lg:col-span-2",
-    icon: "",
-    img: "",
-    bgImg: "",
-  },
-  {
-    id: 8,
-    description: () => "",
-    className: "lg:col-span-1",
-    icon: "",
-    img: "",
-    bgImg: "",
   },
 ]
 
