@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="flex items-center md:gap-3 gap-4 md:order-2">
           <SocialMedia />
         </div>
-        <p className="inline-flex md:font-normal font-light md:order-1">
-          Copyright © 2024 Ujjawal Shrestha
+        <p className="inline-flex md:order-1">
+          Copyright © 2024. Ujjawal Shrestha
         </p>
       </div>
     </footer>

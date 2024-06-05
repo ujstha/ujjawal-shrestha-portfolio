@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { FaLocationArrow } from "react-icons/fa6"
 import emailjs from "@emailjs/browser"
 
 import EarthCanvas from "@canvas/Earth"
@@ -10,6 +9,8 @@ import SectionWrapper from "@/hoc/SectionWrapper"
 import { slideIn } from "@utils/motion"
 import { styles } from "@/styles"
 import { MagicButton } from "@ui/MagicButton"
+import { Icon } from "@iconify/react"
+import { LOCATION_ICON } from "../../constants"
 
 const Label = ({ text }) => (
   <span className="block text-white font-medium mb-2">{text}</span>
@@ -78,7 +79,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-transparent md:p-8 px-4 py-6 rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+        className="flex-[0.75] bg-[rgba(0,0,0,0.05)] backdrop-blur-sm md:p-8 px-4 py-6 rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -95,6 +96,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
+              autoFocus
               placeholder="What's your good name?"
               className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
             />
@@ -106,7 +108,7 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="What's your email address?"
               className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
             />
           </label>
@@ -125,7 +127,7 @@ const Contact = () => {
           <MagicButton
             type="submit"
             title={loading ? "Sending..." : "Send the message"}
-            icon={<FaLocationArrow />}
+            icon={<Icon icon={LOCATION_ICON} />}
             position="right"
           />
         </form>

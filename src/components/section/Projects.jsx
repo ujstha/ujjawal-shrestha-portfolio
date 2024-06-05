@@ -1,11 +1,15 @@
 "use client"
 
-import { FaLocationArrow } from "react-icons/fa6"
+import { motion } from "framer-motion"
+import { Icon } from "@iconify/react"
 
-import { projects } from "@/constants"
 import { PinContainer } from "@ui/Pin"
 import { SectionText } from "@ui/SectionText"
 import SectionWrapper from "@/hoc/SectionWrapper"
+
+import { fadeIn } from "@utils/motion"
+
+import { LOCATION_ICON, projects } from "@/constants"
 
 const Projects = () => {
   return (
@@ -16,13 +20,17 @@ const Projects = () => {
       />
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
-          <div
-            className="lg:min-h-[32.5rem] h-[28rem] flex items-center justify-center sm:w-96 w-[80vw]"
+        {projects.map((item, index) => (
+          <motion.div
+            variants={fadeIn("up", "spring", index * 0.25, 0.75)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="lg:min-h-[32.5rem] h-[26rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
             <PinContainer title={item.demo_link} href={item.demo_link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[25vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
@@ -57,11 +65,11 @@ const Projects = () => {
                   className="flex justify-center items-center text-accent"
                 >
                   <p className="flex">Check Live Site</p>
-                  <FaLocationArrow className="ml-2" />
+                  <Icon icon={LOCATION_ICON} className="ml-2" />
                 </a>
               </div>
             </PinContainer>
-          </div>
+          </motion.div>
         ))}
       </div>
     </>
