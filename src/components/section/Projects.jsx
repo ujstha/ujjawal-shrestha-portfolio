@@ -19,7 +19,7 @@ const Projects = () => {
         headText={`Recent Projects.`}
       />
 
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-16 mt-10">
         {projects.map((item, index) => (
           <motion.div
             variants={fadeIn("up", "spring", index * 0.25, 0.75)}
