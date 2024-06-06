@@ -4,6 +4,7 @@ import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "@utils/cn"
+import { styles } from "@/styles"
 
 const Drawer = ({ shouldScaleBackground = true, ...props }) => (
   <DrawerPrimitive.Root
@@ -35,12 +36,12 @@ const DrawerContent = React.forwardRef(
       <DrawerPrimitive.Content
         ref={ref}
         className={cn(
-          "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950",
+          `fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-2xl border border-white/[0.1] bg-primary/[0.6] backdrop-blur-2xl`,
           className
         )}
         {...props}
       >
-        <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-zinc-100 dark:bg-zinc-800" />
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 mx-auto mt-4 h-2 w-[100px] rounded-full bg-zinc-100 dark:bg-zinc-800" />
         {children}
       </DrawerPrimitive.Content>
     </DrawerPortal>
@@ -58,7 +59,7 @@ DrawerHeader.displayName = "DrawerHeader"
 
 const DrawerFooter = ({ className, ...props }) => (
   <div
-    className={cn("mt-auto flex flex-col gap-2 p-4", className)}
+    className={cn("flex justify-center gap-2 py-4 px-8", className)}
     {...props}
   />
 )
@@ -68,7 +69,7 @@ const DrawerTitle = React.forwardRef(({ className, ...props }, ref) => (
   <DrawerPrimitive.Title
     ref={ref}
     className={cn(
-      "text-lg font-semibold leading-none tracking-tight",
+      "px-8 pt-4 text-xl font-semibold leading-relaxed tracking-wide",
       className
     )}
     {...props}
@@ -79,7 +80,7 @@ DrawerTitle.displayName = DrawerPrimitive.Title.displayName
 const DrawerDescription = React.forwardRef(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-zinc-500 dark:text-zinc-400", className)}
+    className={cn("px-8 text-sm text-zinc-500 dark:text-zinc-400", className)}
     {...props}
   />
 ))

@@ -65,7 +65,7 @@ const Experience = () => {
     <>
       <SectionText
         subText={`Companies I have worked with`}
-        headText={`Work Experience.`}
+        headText={`Professional Experience.`}
       />
 
       <div className="mt-16 flex flex-col sm:mx-auto -mx-6">
