@@ -3,6 +3,7 @@ import { BackgroundGradientAnimation } from "./GradientBackground"
 import { styles } from "@/styles"
 import { cn } from "@utils/cn"
 import { skills } from "@/constants"
+import { Meteors } from "./Meteors"
 
 export const BentoGrid = ({ className, children }) => {
   return (
@@ -41,10 +42,11 @@ export const BentoGridItem = ({
         <div className={`h-full absolute inset-0`}>
           <img
             src={bgImg}
-            className="object-cover object-center opacity-50 h-full w-full"
+            className="object-cover object-center opacity-80 h-full w-full"
           />
         </div>
       )}
+      {id === 2 && <Meteors number={16} />}
       {id === 5 && (
         <BackgroundGradientAnimation>
           <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>

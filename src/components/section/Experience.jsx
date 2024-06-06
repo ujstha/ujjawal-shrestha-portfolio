@@ -50,7 +50,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-secondary-foreground font-thin text-sm tracking-wider"
+            className="text-secondary font-thin text-sm tracking-wider"
           >
             {point}
           </li>
@@ -65,7 +65,7 @@ const Experience = () => {
     <>
       <SectionText
         subText={`Companies I have worked with`}
-        headText={`Work Experience.`}
+        headText={`Professional Experience.`}
       />
 
       <div className="mt-16 flex flex-col sm:mx-auto -mx-6">

@@ -7,7 +7,7 @@ import Contact from "@section/Contact"
 import Education from "@section/Education"
 import Footer from "@layout/Footer"
 import StarsCanvas from "@canvas/Stars"
-import About from "../components/section/About"
+import About from "@section/About"
 
 export default function Home() {
   return (
