@@ -22,7 +22,7 @@ export const ProjectInfo = ({ project }) => {
   if (project?.gallery?.length > 0) images.push(...project.gallery)
 
   return (
-    <div className="p-8 max-h-[70dvh] overflow-y-auto overflow-x-clip drawer-desc">
+    <div className="p-8 h-[60dvh] sm:h-[70dvh] overflow-y-auto overflow-x-clip drawer-desc">
       <div className="sm:flex gap-6 justify-between">
         <span>
           <h5 className="mb-4 text-lg font-semibold underline underline-offset-8">

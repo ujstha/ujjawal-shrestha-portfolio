@@ -7,7 +7,18 @@ const inter = Outfit({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Ujjawal's Portfolio",
-  description: "Full-stack Developer",
+  description:
+    "Ujjawal Shrestha | Expert Full-stack Developer (React, Next.js). Crafting high-performance web applications. Let's build something amazing together!",
+  authors: [{ name: "Ujjawal Shrestha", url: "https://github.com/ujstha" }],
+  other: {
+    "theme-color": "#18181b",
+    "color-scheme": "dark only",
+    "twitter:image": "/assets/ujjawal.png",
+    "twitter:card": "summary_large_image",
+    "og:url": "ujjawalshrestha.com.np",
+    "og:image": "/assets/ujjawal.png",
+    "og:type": "website",
+  },
 }
 
 export default function RootLayout({ children }) {
