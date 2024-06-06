@@ -17,7 +17,9 @@ export const ProjectLink = ({ variant, children, href, icon }) => (
 )
 
 export const ProjectInfo = ({ project }) => {
-  const images = [project.projectImage, ...project.gallery]
+  let images = [project.projectImage]
+
+  if (project?.gallery?.length > 0) images.push(...project.gallery)
 
   return (
     <div className="p-8 max-h-[70dvh] overflow-y-auto overflow-x-clip drawer-desc">
