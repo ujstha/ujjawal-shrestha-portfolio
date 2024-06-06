@@ -42,7 +42,7 @@ export const BentoGridItem = ({
         <div className={`h-full absolute inset-0`}>
           <img
             src={bgImg}
-            className="object-cover object-center opacity-50 h-full w-full"
+            className="object-cover object-center opacity-80 h-full w-full"
           />
         </div>
       )}
