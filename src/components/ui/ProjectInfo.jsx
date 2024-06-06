@@ -17,6 +17,8 @@ export const ProjectLink = ({ variant, children, href, icon }) => (
 )
 
 export const ProjectInfo = ({ project }) => {
+  const images = [project.projectImage, ...project.gallery]
+
   return (
     <div className="p-8 max-h-[70dvh] overflow-y-auto overflow-x-clip drawer-desc">
       <div className="sm:flex gap-6 justify-between">
@@ -50,9 +52,18 @@ export const ProjectInfo = ({ project }) => {
         </span>
         <ImagesSlider
           className="h-[22rem] max-w-xl"
-          images={[urlFor(project.projectImage), urlFor(project.projectImage)]}
+          images={images}
+          autoplay={images.length > 1 ? true : false}
         />
       </div>
+      {project.content && (
+        <div>
+          <h5 className="mb-4 text-lg font-semibold underline underline-offset-8">
+            Description
+          </h5>
+          <div>{project.content}</div>
+        </div>
+      )}
     </div>
   )
 }

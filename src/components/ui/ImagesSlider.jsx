@@ -2,10 +2,10 @@
 
 import React, { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-
-import { cn } from "@/utils"
 import { Icon } from "@iconify/react"
-import { ARROW_LEFT_ICON, ARROW_RIGHT_ICON } from "../../constants"
+
+import { cn, urlFor } from "@/utils"
+import { ARROW_LEFT_ICON, ARROW_RIGHT_ICON } from "@/constants"
 
 export const ImagesSlider = ({
   images,
@@ -41,7 +41,7 @@ export const ImagesSlider = ({
     const loadPromises = images.map((image) => {
       return new Promise((resolve, reject) => {
         const img = new Image()
-        img.src = image
+        img.src = urlFor(image)
         img.onload = () => resolve(image)
         img.onerror = reject
       })
@@ -115,18 +115,22 @@ export const ImagesSlider = ({
   return (
     <div className={cn("w-full h-full px-8 my-8 sm:my-0", className)}>
       <div className={cn("relative h-full w-full", className)}>
-        <button
-          onClick={() => handleNext()}
-          className="absolute -right-8 top-1/2 -translate-y-1/2 z-50 rounded-full border border-white/60 p-1 hover:border-accent hover:text-accent"
-        >
-          <Icon icon={ARROW_RIGHT_ICON} />
-        </button>
-        <button
-          onClick={() => handlePrevious()}
-          className="absolute -left-8 top-1/2 -translate-y-1/2 z-50 rounded-full border border-white/60 p-1 hover:border-accent hover:text-accent"
-        >
-          <Icon icon={ARROW_LEFT_ICON} />
-        </button>
+        {images?.length > 1 && (
+          <>
+            <button
+              onClick={() => handleNext()}
+              className="absolute -right-8 top-1/2 -translate-y-1/2 z-50 rounded-full border border-white/60 p-1 hover:border-accent hover:text-accent"
+            >
+              <Icon icon={ARROW_RIGHT_ICON} />
+            </button>
+            <button
+              onClick={() => handlePrevious()}
+              className="absolute -left-8 top-1/2 -translate-y-1/2 z-50 rounded-full border border-white/60 p-1 hover:border-accent hover:text-accent"
+            >
+              <Icon icon={ARROW_LEFT_ICON} />
+            </button>
+          </>
+        )}
         <div
           className={cn(
             "overflow-hidden h-full w-full relative flex items-center justify-center",
@@ -145,12 +149,11 @@ export const ImagesSlider = ({
               )}
             />
           )}
-
           {areImagesLoaded && (
             <AnimatePresence>
               <motion.img
                 key={currentIndex}
-                src={loadedImages[currentIndex]}
+                src={urlFor(loadedImages[currentIndex])}
                 initial="initial"
                 animate="visible"
                 exit={direction === "up" ? "upExit" : "downExit"}

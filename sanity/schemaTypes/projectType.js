@@ -20,6 +20,15 @@ export const projectType = defineType({
       type: 'image',
     }),
     defineField({
+      name: 'gallery',
+      title: 'Image Gallery of Project',
+      type: 'array',
+      of: [{type: 'image'}],
+      options: {
+        layout: 'grid',
+      },
+    }),
+    defineField({
       name: 'smallDescription',
       title: 'Small Description',
       type: 'text',
