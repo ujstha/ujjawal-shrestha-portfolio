@@ -26,6 +26,13 @@ export const projectType = defineType({
       rows: 4,
     }),
     defineField({
+      name: 'categories',
+      title: 'Categories of the project',
+      type: 'text',
+      rows: 2,
+      description: 'Comma separated with space after the comma. (e.g. frontend, backend)',
+    }),
+    defineField({
       name: 'techs',
       title: 'Techs used in the project',
       type: 'text',
@@ -34,7 +41,7 @@ export const projectType = defineType({
     }),
     defineField({
       name: 'demo_link',
-      title: 'Link to the live site',
+      title: 'Link to the demo',
       type: 'url',
       description: 'https://example.com',
     }),

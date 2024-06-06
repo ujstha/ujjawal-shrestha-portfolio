@@ -29,11 +29,11 @@ export const ProjectCard = ({ project, index }) => (
         />
       </div>
 
-      <h3 className="font-bold lg:text-xl text-lg line-clamp-1">
+      <h3 className="font-bold text-left lg:text-xl text-lg line-clamp-1">
         {project.title}
       </h3>
 
-      <p className="text-secondary line-clamp-2 my-[1vh] mx-0">
+      <p className="text-secondary text-left line-clamp-2 my-[1vh] mx-0">
         {project.smallDescription}
       </p>
 

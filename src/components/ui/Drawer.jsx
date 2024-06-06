@@ -3,8 +3,7 @@
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 
-import { cn } from "@utils/cn"
-import { styles } from "@/styles"
+import { cn } from "@/utils"
 
 const Drawer = ({ shouldScaleBackground = true, ...props }) => (
   <DrawerPrimitive.Root
@@ -41,7 +40,7 @@ const DrawerContent = React.forwardRef(
         )}
         {...props}
       >
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 mx-auto mt-4 h-2 w-[100px] rounded-full bg-zinc-100 dark:bg-zinc-800" />
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 mx-auto mt-4 h-2 w-[100px] rounded-full bg-accent/40" />
         {children}
       </DrawerPrimitive.Content>
     </DrawerPortal>
@@ -80,7 +79,7 @@ DrawerTitle.displayName = DrawerPrimitive.Title.displayName
 const DrawerDescription = React.forwardRef(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("px-8 text-sm text-zinc-500 dark:text-zinc-400", className)}
+    className={cn("px-8 text-secondary", className)}
     {...props}
   />
 ))

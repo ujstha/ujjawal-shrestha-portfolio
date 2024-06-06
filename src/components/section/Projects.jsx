@@ -14,6 +14,8 @@ import {
   DrawerTrigger,
   LinkButton,
   ProjectCard,
+  ProjectInfo,
+  ProjectLink,
   SectionText,
 } from "@/components/ui"
 import SectionWrapper from "@/hoc/SectionWrapper"
@@ -36,15 +38,8 @@ const Projects = () => {
 
       <div className="flex relative flex-wrap items-center justify-center p-4 gap-x-24 gap-y-16 mt-10">
         {projects?.map((project, index) => {
-          const {
-            slug,
-            title,
-            smallDescription,
-            techs,
-            projectImage,
-            demo_link,
-            source_code_link,
-          } = project
+          const { slug, title, source_code_link, demo_link, smallDescription } =
+            project
           return (
             <Drawer key={slug}>
               <DrawerTrigger>
@@ -55,36 +50,19 @@ const Projects = () => {
                   <DrawerTitle>{title}</DrawerTitle>
                   <DrawerDescription>{smallDescription}</DrawerDescription>
                 </DrawerHeader>
-                <div className="p-8 max-h-[70dvh] overflow-y-auto drawer-desc">
-                  <h5 className="mb-2 text-lg font-semibold text-secondary">
-                    Project Information
-                  </h5>
-                  <div>
-                    <p>
-                      <span className="font-medium">Technologies:</span> {techs}
-                    </p>
-                  </div>
-                </div>
+                <ProjectInfo project={project} />
                 <DrawerFooter>
                   <DrawerClose>
-                    <LinkButton
+                    <ProjectLink
                       variant="outline"
                       href={source_code_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon icon={GITHUB_ICON} />
-                    </LinkButton>
+                      icon={GITHUB_ICON}
+                    />
                   </DrawerClose>
                   <DrawerClose>
-                    <LinkButton
-                      href={demo_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <ProjectLink href={demo_link} icon={LOCATION_ICON}>
                       Check Demo Site &nbsp;
-                      <Icon icon={LOCATION_ICON} />
-                    </LinkButton>
+                    </ProjectLink>
                   </DrawerClose>
                 </DrawerFooter>
               </DrawerContent>
