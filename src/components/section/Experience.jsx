@@ -12,7 +12,7 @@ import SectionWrapper from "@/hoc/SectionWrapper"
 import { SectionText } from "@ui/SectionText"
 
 import { experienceQuery } from "@/constants"
-import { client, textVariant, urlFor } from "@/utils"
+import { client, urlFor } from "@/utils"
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -38,7 +38,7 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <motion.div variants={textVariant()}>
+      <motion.div>
         <h3 className="text-white sm:text-[24px] text-[20px] font-medium">
           {experience.title}
         </h3>
