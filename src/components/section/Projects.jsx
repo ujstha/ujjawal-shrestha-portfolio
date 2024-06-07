@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Icon } from "@iconify/react"
 
 import {
   Drawer,
@@ -12,7 +11,6 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-  LinkButton,
   ProjectCard,
   ProjectInfo,
   ProjectLink,
