@@ -91,7 +91,7 @@ export const infos = [
     id: 3,
     description: () => (
       <span className="text-center">
-        <h4 className="text-5xl md:text-6xl font-semibold">5+</h4>
+        <h3 className="text-5xl md:text-6xl font-semibold">5+</h3>
         <p>Completed Projects</p>
       </span>
     ),
@@ -104,7 +104,7 @@ export const infos = [
     id: 4,
     description: () => (
       <span className="text-center">
-        <h4 className="text-5xl md:text-6xl font-semibold">4+</h4>
+        <h3 className="text-5xl md:text-6xl font-semibold">4+</h3>
         <p>Years of Experience</p>
       </span>
     ),
@@ -129,9 +129,9 @@ export const infos = [
     id: 6,
     description: () => (
       <>
-        <h4 className="font-bold -mt-2">
+        <h3 className="font-bold -mt-2">
           Tech enthusiast with a passion for development.
-        </h4>
+        </h3>
       </>
     ),
     className: "lg:col-span-2 text-2xl md:text-3xl",

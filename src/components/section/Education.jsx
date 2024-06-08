@@ -30,16 +30,16 @@ const Education = () => {
               <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
                 <img
                   src={`/assets/edu.svg`}
-                  alt={`education`}
+                  alt={`education-${edu.degree}`}
                   className="lg:w-24 md:w-20 w-16"
                 />
                 <div className="lg:ms-5 w-full flex-1">
                   <span className="block text-start">
                     {edu.start_year} - {edu.end_year}
                   </span>
-                  <h1 className="text-start text-xl md:text-2xl font-bold">
+                  <p className="text-start text-xl md:text-2xl font-bold">
                     {edu.degree}
-                  </h1>
+                  </p>
 
                   <p className="text-start text-lg text-white-100 mt-1">
                     {edu.institution}

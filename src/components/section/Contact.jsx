@@ -66,8 +66,6 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false)
-          console.error(error)
-
           alert("Ahh, something went wrong. Please try again.")
         }
       )
@@ -82,7 +80,7 @@ const Contact = () => {
         className="flex-[0.75] bg-[rgba(0,0,0,0.05)] backdrop-blur-sm md:p-8 px-4 py-6 rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h2 className={styles.sectionHeadText}>Contact.</h2>
 
         <form
           ref={formRef}

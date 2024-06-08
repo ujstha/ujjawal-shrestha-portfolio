@@ -24,7 +24,7 @@ export const ProjectCard = ({ project, index }) => (
         </div>
         <img
           src={urlFor(project.projectImage)}
-          alt="cover"
+          alt="project-cover"
           className="object-cover !object-top absolute top-0"
         />
       </div>
