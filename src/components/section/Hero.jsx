@@ -49,7 +49,11 @@ const Hero = () => {
           <div className="flex items-center md:gap-3 gap-4 mt-4 sm:mt-6">
             <SocialMedia />
           </div>
-          <a href="#projects" className="relative z-10 block sm:mt-6 mt-10">
+          <a
+            href="#projects"
+            aria-label="view-projects"
+            className="relative z-10 block sm:mt-6 mt-10"
+          >
             <MagicButton
               title="View my projects"
               icon={<Icon icon={LOCATION_ICON} />}

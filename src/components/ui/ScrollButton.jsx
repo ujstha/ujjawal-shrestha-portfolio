@@ -12,7 +12,7 @@ export const ScrollButton = () => {
       }}
       className="absolute sm:bottom-20 xl:bottom-10 bottom-12 w-full flex justify-center items-center z-10"
     >
-      <a href="#experience">
+      <a href="#experience" aria-label="experience-btn">
         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-accent-foreground flex justify-center items-start p-2">
           <motion.div
             animate={{
