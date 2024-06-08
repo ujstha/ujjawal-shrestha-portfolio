@@ -43,6 +43,9 @@ export const BentoGridItem = ({
           <img
             src={bgImg}
             className="object-cover object-center opacity-80 h-full w-full"
+            height={`100%`}
+            width={`100%`}
+            alt={bgImg}
           />
         </div>
       )}
@@ -58,6 +61,7 @@ export const BentoGridItem = ({
           <div className={`h-full flex items-center justify-center`}>
             <img
               src={img}
+              alt={`${img}-${id}`}
               className="object-cover size-44 md:size-36 lg:size-44 object-left border border-white/[0.1] bg-black-100 rounded-full"
             />
           </div>

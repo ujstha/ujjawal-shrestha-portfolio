@@ -25,9 +25,9 @@ export const ProjectInfo = ({ project }) => {
     <div className="p-8 h-[60dvh] sm:h-[70dvh] overflow-y-auto overflow-x-clip drawer-desc">
       <div className="sm:flex gap-6 justify-between">
         <span>
-          <h5 className="mb-4 text-lg font-semibold underline underline-offset-8">
+          <div className="mb-4 text-lg font-semibold underline underline-offset-8">
             Project Information
-          </h5>
+          </div>
           <div>
             <p className="mb-1">
               <span className="inline-block mr-2 font-medium">Categories:</span>{" "}
@@ -60,9 +60,9 @@ export const ProjectInfo = ({ project }) => {
       </div>
       {project.content && (
         <div>
-          <h5 className="mb-4 text-lg font-semibold underline underline-offset-8">
+          <div className="mb-4 text-lg font-semibold underline underline-offset-8">
             Description
-          </h5>
+          </div>
           <div>{project.content}</div>
         </div>
       )}
