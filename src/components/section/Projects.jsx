@@ -28,10 +28,10 @@ const Projects = () => {
   }, [])
 
   return (
-    <div>
+    <>
       <SectionText
         subText={`A small selection of my work`}
-        headText={`Recent Projects.`}
+        headText={`Recent Projects`}
       />
 
       <div className="flex relative flex-wrap items-center justify-center p-4 gap-x-24 gap-y-16 mt-10">
@@ -68,7 +68,7 @@ const Projects = () => {
           )
         })}
       </div>
-    </div>
+    </>
   )
 }
 

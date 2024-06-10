@@ -9,7 +9,7 @@ import { infos } from "@/constants"
 const About = () => {
   return (
     <>
-      <SectionText subText={`Get to know me`} headText={`About.`} />
+      <SectionText subText={`Get to know me`} headText={`About`} />
       <BentoGrid className="mt-16">
         {infos.map((info, index) => (
           <BentoGridItem
