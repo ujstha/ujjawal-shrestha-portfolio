@@ -74,10 +74,11 @@ export const BentoGridItem = ({
               <div className="mt-10 flex justify-center items-center flex-wrap gap-6">
                 {skills.map((skill, index) => (
                   <img
-                    key={skill}
+                    key={`${skill}-${index}`}
                     src={`/assets/tech/${skill}.svg`}
                     alt={skill}
-                    className="size-12 md:size-16 object-contain"
+                    className="size-12 md:size-16 object-contain cursor-pointer hover:scale-110 transition-transform duration-300"
+                    title={skill}
                   />
                 ))}
               </div>

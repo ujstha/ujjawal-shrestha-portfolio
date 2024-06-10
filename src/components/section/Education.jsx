@@ -8,8 +8,8 @@ import { educations } from "@/constants"
 
 const Education = () => {
   return (
-    <div className="w-full">
-      <SectionText subText={`Where I studied`} headText={`Education.`} />
+    <>
+      <SectionText subText={`Where I studied`} headText={`Education`} />
 
       <div className="w-full mt-16 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {educations
@@ -50,7 +50,7 @@ const Education = () => {
             </MovingBorders>
           ))}
       </div>
-    </div>
+    </>
   )
 }
 

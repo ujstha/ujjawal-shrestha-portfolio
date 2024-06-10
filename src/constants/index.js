@@ -22,19 +22,19 @@ export const navLinks = [
 export const educations = [
   {
     id: 1,
-    degree: "High School Diploma",
-    institution: "Prasadi Adacemy Higher Secondary School",
-    place: "Kathmandu, Nepal",
-    start_year: "2013",
-    end_year: "2015",
-  },
-  {
-    id: 2,
     degree: "Bachelor in Information Technology",
     institution: "Oulu University of Applied Sciences",
     place: "Oulu, Finland",
     start_year: "2016",
     end_year: "2020",
+  },
+  {
+    id: 2,
+    degree: "Master's in Information Technology",
+    institution: "Metropolia University of Applied Sciences",
+    place: "Espoo, Finland",
+    start_year: "2024",
+    end_year: "Present",
   },
 ]
 
@@ -61,12 +61,12 @@ export const infos = [
     id: 1,
     description: () => (
       <>
-        I am Ujjawal Shrestha.
+        Hey there, My name is Ujjawal Shrestha.
         <br />
         <br />
-        I&apos;m a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like NextJS, React, Node.js, and
-        Three.js.
+        I&apos;m a skilled full-stack developer with experience in TypeScript
+        and JavaScript, and expertise in frameworks like NextJS, React, VueJS,
+        Node.js, and Three.js.
         <br />
         <br />
         I&apos;m a quick learner and collaborate closely with clients to create
@@ -104,7 +104,9 @@ export const infos = [
     id: 4,
     description: () => (
       <span className="text-center">
-        <h3 className="text-5xl md:text-6xl font-semibold">4+</h3>
+        <h3 className="text-5xl md:text-6xl font-semibold">
+          {new Date().getFullYear() - 2020}+
+        </h3>
         <p>Years of Experience</p>
       </span>
     ),
