@@ -150,6 +150,7 @@ export const skills = [
   "javascript",
   "next",
   "reactjs",
+  "vue",
   "docker",
   "git",
   "tailwind",
