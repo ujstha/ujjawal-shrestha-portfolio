@@ -95,6 +95,7 @@ const Contact = () => {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
+                required
                 autoFocus
                 placeholder="What's your good name?"
                 className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
@@ -107,6 +108,7 @@ const Contact = () => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
+                required
                 placeholder="What's your email address?"
                 className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
               />
@@ -118,6 +120,7 @@ const Contact = () => {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
+                required
                 placeholder="What you want to say?"
                 className="bg-input md:py-4 md:px-6 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border-none"
               />
