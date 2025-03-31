@@ -69,9 +69,10 @@ export const infos = [
         Node.js, and Three.js.
         <br />
         <br />
-        I&apos;m a quick learner and collaborate closely with clients to create
-        efficient, scalable, and user-friendly solutions that solve real-world
-        problems. Let&apos;s work together to bring ideas to life!
+        I&apos;m a quick learner, software development architecture and
+        analyser, and collaborate closely with clients to create efficient,
+        scalable, and user-friendly solutions that solve real-world problems.
+        Let&apos;s work together to bring ideas to life!
       </>
     ),
     className: "md:col-span-4 lg:col-span-3",
@@ -105,7 +106,7 @@ export const infos = [
     description: () => (
       <span className="text-center">
         <h3 className="text-5xl md:text-6xl font-semibold">
-          {new Date().getFullYear() - 2020}+
+          {new Date().getFullYear() - 2017}+
         </h3>
         <p>Years of Experience</p>
       </span>
