@@ -43,7 +43,7 @@ const Hero = () => {
             <span className="text-accent font-extrabold">Ujjawal 👋</span>
           </h1>
           <TextGenerateEffect
-            words="Full-stack Developer. Software Architecture and Analyser. Freelancer."
+            words="Full-stack Developer. Software Architecture. Freelancer."
             className={`sm:mt-2 mt-1 text-muted lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[18px] lg:leading-[30px] font-thin`}
           />
           <div className="flex items-center md:gap-3 gap-4 mt-4 sm:mt-6">

@@ -68,11 +68,13 @@ export const infos = [
         and JavaScript, and expertise in frameworks like NextJS, React, VueJS,
         Node.js, and Three.js.
         <br />
+        <br />I provide software development services including full stack
+        development, software architecture development and analysis, and DevOps.
         <br />
-        I&apos;m a quick learner, software development architecture and
-        analyser, and collaborate closely with clients to create efficient,
-        scalable, and user-friendly solutions that solve real-world problems.
-        Let&apos;s work together to bring ideas to life!
+        <br />
+        I&apos;m a quick learner and collaborate closely with clients to create
+        efficient, scalable, and user-friendly solutions that solve real-world
+        problems. Let&apos;s work together to bring ideas to life!
       </>
     ),
     className: "md:col-span-4 lg:col-span-3",

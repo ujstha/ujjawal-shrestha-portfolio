@@ -62,7 +62,7 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={`${img}-${id}`}
-              className="object-cover size-44 md:size-36 lg:size-44 object-left border border-white/[0.1] bg-black-100 rounded-full"
+              className="object-cover size-44 md:size-36 lg:size-60 object-left border border-white/[0.1] bg-black-100 rounded-full"
             />
           </div>
         )}
