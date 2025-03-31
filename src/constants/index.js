@@ -68,6 +68,9 @@ export const infos = [
         and JavaScript, and expertise in frameworks like NextJS, React, VueJS,
         Node.js, and Three.js.
         <br />
+        <br />I provide software development services including full stack
+        development, software architecture development and analysis, and DevOps.
+        <br />
         <br />
         I&apos;m a quick learner and collaborate closely with clients to create
         efficient, scalable, and user-friendly solutions that solve real-world
@@ -105,7 +108,7 @@ export const infos = [
     description: () => (
       <span className="text-center">
         <h3 className="text-5xl md:text-6xl font-semibold">
-          {new Date().getFullYear() - 2020}+
+          {new Date().getFullYear() - 2017}+
         </h3>
         <p>Years of Experience</p>
       </span>
